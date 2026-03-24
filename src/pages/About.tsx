@@ -70,12 +70,12 @@ const About = () => {
             </GsapReveal>
             
             <GsapReveal direction="right">
-              <span className="inline-block text-spice-red font-body font-bold text-sm uppercase tracking-[0.3em] mb-4">Crafting Excellence</span>
-            <h2 className="font-display text-4xl md:text-5xl font-bold mb-8 leading-tight text-spice-dark">The <span className="text-gradient-spice">Dodke Masale</span> Legacy</h2>
-            <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
-              <p>
-                Dodke Masale began with a passion to preserve the true taste of Indian spices. What started as a small family tradition has grown into a trusted name known for purity and quality.
-              </p>
+              <span className="inline-block text-spice-red font-body font-bold text-xs sm:text-sm uppercase tracking-widest mb-4">Crafting Excellence</span>
+              <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold mb-6 sm:mb-8 leading-tight text-spice-dark">The <span className="text-gradient-spice">Dodke Masale</span> Legacy</h2>
+              <div className="space-y-4 sm:space-y-6 text-base sm:text-lg text-muted-foreground leading-relaxed">
+                <p>
+                  Dodke Masale began with a passion to preserve the true taste of Indian spices. What started as a small family tradition has grown into a trusted name known for purity and quality.
+                </p>
               <p>
                 We carefully select our spices from reliable farmers and suppliers to ensure rich aroma, great taste, and consistency in every pack. Our process is designed to retain the natural oils, color, and freshness of each spice.
               </p>

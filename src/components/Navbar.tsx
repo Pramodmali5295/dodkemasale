@@ -37,10 +37,10 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 sm:gap-3">
-          <img src={logoImg} alt="Dodke Masale" className="w-12 h-12 sm:w-16 sm:h-16 object-contain" />
-          <span className="font-display text-lg sm:text-2xl font-bold text-spice-gold tracking-wider whitespace-nowrap">
-            Dodke Masale <sup className="text-xs">TM</sup>
+        <Link to="/" className="flex items-center gap-1.5 sm:gap-3 shrink-1 min-w-0">
+          <img src={logoImg} alt="Dodke Masale" className="w-10 h-10 sm:w-16 sm:h-16 object-contain" />
+          <span className="font-display text-base sm:text-xl lg:text-2xl font-bold text-spice-gold tracking-wider whitespace-nowrap overflow-hidden text-ellipsis">
+            Dodke Masale <sup className="text-[10px] sm:text-xs">TM</sup>
           </span>
         </Link>
 
@@ -70,7 +70,7 @@ const Navbar = () => {
         {/* Mobile toggle */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="lg:hidden text-white p-1"
+          className="lg:hidden text-white p-2 shrink-0 bg-white/5 rounded-lg border border-white/10"
           aria-label="Toggle menu"
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}

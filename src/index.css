@@ -93,10 +93,18 @@
 @layer base {
   * {
     @apply border-border;
+    max-width: 100vw;
   }
 
   body {
-    @apply bg-background text-foreground font-body;
+    @apply bg-background text-foreground font-body overflow-x-hidden w-full;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  html {
+    @apply overflow-x-hidden w-full;
+    scroll-behavior: smooth;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -173,5 +181,6 @@
 }
 
 html {
+  @apply overflow-x-hidden;
   scroll-behavior: smooth;
 }
