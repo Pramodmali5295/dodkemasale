@@ -62,10 +62,10 @@ const About = () => {
       <section className="py-20 overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <GsapReveal direction="left" className="relative">
-              <div className="absolute -top-6 -left-6 w-32 h-32 bg-gradient-spice rounded-full blur-3xl opacity-20" />
+            <GsapReveal direction="left" className="relative mx-auto w-[90%] sm:w-full max-w-lg lg:max-w-none">
+              <div className="absolute -top-6 -left-6 w-24 h-24 bg-gradient-spice rounded-full blur-3xl opacity-20" />
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <img src={aboutImg} alt="The Dodke Masale Story" className="w-full object-cover aspect-square lg:aspect-[4/3]" />
+                <img src={aboutImg} alt="The Dodke Masale Story" className="w-full object-cover aspect-[4/3] lg:aspect-[4/3]" />
               </div>
             </GsapReveal>
             
@@ -170,7 +170,7 @@ const About = () => {
                 ))}
               </div>
             </GsapReveal>
-            <GsapReveal direction="right" className="lg:order-2">
+            <GsapReveal direction="right" className="lg:order-2 mx-auto w-[90%] sm:w-full max-w-lg lg:max-w-none">
               <div className="relative">
                 <div className="absolute inset-0 bg-spice-red/5 rounded-2xl -rotate-3 scale-105" />
                 <img src={productionImg} alt="Modern spice production" className="relative z-10 rounded-2xl shadow-2xl w-full object-cover aspect-[4/3]" />
