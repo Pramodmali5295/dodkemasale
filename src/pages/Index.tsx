@@ -176,8 +176,8 @@ const Index = () => {
                     <Star key={j} size={16} className="fill-spice-gold text-spice-gold" />
                   ))}
                 </div>
-                <p className="font-body text-muted-foreground text-sm italic mb-4">"{t.text}"</p>
-                <p className="font-display font-semibold text-spice-dark">{t.name}</p>
+                <p className="font-body text-black text-sm italic mb-4">"{t.text}"</p>
+                <p className="font-display font-semibold text-black">{t.name}</p>
               </div>
             ))}
           </div>

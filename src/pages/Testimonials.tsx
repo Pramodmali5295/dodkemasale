@@ -28,14 +28,14 @@ const Testimonials = () => (
             <GsapReveal key={r.name} direction="up" delay={i * 0.1}>
               <div className="bg-card p-6 rounded-xl shadow-md h-full flex flex-col">
                 <Quote size={28} className="text-primary/30 mb-3" />
-                <p className="font-body text-muted-foreground text-sm italic mb-4 flex-1">"{r.text}"</p>
+                <p className="font-body text-black text-sm italic mb-4 flex-1">"{r.text}"</p>
                 <div className="flex flex-col items-end">
                   <div className="flex gap-1 mb-1">
                     {Array.from({ length: r.rating }).map((_, j) => (
                       <Star key={j} size={14} className="fill-spice-gold text-spice-gold" />
                     ))}
                   </div>
-                  <p className="font-display font-semibold text-sm">{r.name}</p>
+                  <p className="font-display font-semibold text-sm text-black">{r.name}</p>
                 </div>
               </div>
             </GsapReveal>
