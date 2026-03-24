@@ -50,7 +50,7 @@ const Navbar = () => {
             <Link
               key={link.to}
               to={link.to}
-              className={`text-sm font-body font-medium transition-colors duration-200 hover:text-spice-gold ${
+              className={`text-[15px] font-body font-semibold transition-colors duration-200 hover:text-spice-gold ${
                 location.pathname === link.to
                   ? "text-spice-gold"
                   : "text-white"
@@ -61,7 +61,7 @@ const Navbar = () => {
           ))}
           <Link
             to="/contact"
-            className="bg-gradient-spice text-white px-6 py-2 rounded-full text-sm font-body font-bold hover:scale-105 transition-transform duration-300 shadow-spice"
+            className="bg-gradient-spice text-white px-7 py-2.5 rounded-full text-[15px] font-body font-bold hover:scale-105 transition-transform duration-300 shadow-spice"
           >
             Contact Us
           </Link>
@@ -85,7 +85,7 @@ const Navbar = () => {
               <Link
                 key={link.to}
                 to={link.to}
-                className={`text-base font-body py-2 transition-colors ${
+                className={`text-lg font-body font-bold py-3 transition-colors ${
                   location.pathname === link.to
                     ? "text-spice-gold"
                     : "text-white hover:text-spice-gold"
