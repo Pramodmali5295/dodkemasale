@@ -12,9 +12,9 @@ import gallery2 from "@/assets/gallery-2.jpg";
 import aboutImg from "@/assets/gallery-1.jpg";
 import productionImg from "@/assets/gallery-2.jpg";
 import team1 from "@/assets/team1.jpg";
-import team2 from "@/assets/team2.jpg";
-import team3 from "@/assets/team3.jpg";
-import team4 from "@/assets/team4.jpg";
+import team2 from "@/assets/team2.jpeg";
+import team3 from "@/assets/team3.jpeg";
+import team4 from "@/assets/team4.jpeg";
 import { X, Maximize2, Camera } from "lucide-react";
 
 const images = [
