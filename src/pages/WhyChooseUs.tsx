@@ -22,7 +22,7 @@ const WhyChooseUs = () => (
           <span className="text-spice-red font-body font-bold text-sm uppercase tracking-[0.3em] mb-4 inline-block">Uncompromising Standards</span>
           <h2 className="font-display text-4xl md:text-5xl font-bold mb-8 text-spice-dark">We Don't Just Sell Spices; <br /> <span className="text-gradient-spice">We Deliver Purity</span></h2>
           <p className="font-body text-xl text-muted-foreground leading-relaxed italic">
-            "At Dodke Masale, we believe the heart of a great meal lies in its ingredients. For 35 years, we have mastered the art of spice blending, ensuring that the natural vibrancy and healing properties of each spice remain fully intact."
+            "At Dodke Masale, we believe the heart of a great meal lies in its ingredients. We focus on the art of spice blending, ensuring the natural flavor and goodness of every spice is preserved."
           </p>
         </GsapReveal>
       </div>

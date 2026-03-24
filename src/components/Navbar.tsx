@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import logoImg from "@/assets/logo.png";
+import logoImg from "@/assets/favlogo.png";
 
 const navLinks = [
   { to: "/", label: "Home" },
@@ -38,9 +38,9 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 sm:gap-3">
-          <img src={logoImg} alt="Dodke Masale" className="w-8 h-8 sm:w-10 sm:h-10 object-contain" />
+          <img src={logoImg} alt="Dodke Masale" className="w-12 h-12 sm:w-16 sm:h-16 object-contain" />
           <span className="font-display text-lg sm:text-2xl font-bold text-spice-gold tracking-wider whitespace-nowrap">
-            Dodke Masale
+            Dodke Masale <sup className="text-xs">TM</sup>
           </span>
         </Link>
 
@@ -53,7 +53,7 @@ const Navbar = () => {
               className={`text-sm font-body font-medium transition-colors duration-200 hover:text-spice-gold ${
                 location.pathname === link.to
                   ? "text-spice-gold"
-                  : "text-spice-cream/80"
+                  : "text-white"
               }`}
             >
               {link.label}
@@ -70,7 +70,7 @@ const Navbar = () => {
         {/* Mobile toggle */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="lg:hidden text-spice-cream p-1"
+          className="lg:hidden text-white p-1"
           aria-label="Toggle menu"
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -88,7 +88,7 @@ const Navbar = () => {
                 className={`text-base font-body py-2 transition-colors ${
                   location.pathname === link.to
                     ? "text-spice-gold"
-                    : "text-spice-cream/80 hover:text-spice-gold"
+                    : "text-white hover:text-spice-gold"
                 }`}
               >
                 {link.label}

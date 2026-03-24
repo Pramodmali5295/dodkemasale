@@ -9,8 +9,12 @@ import corianderImg from "@/assets/coriander.jpg";
 import garamMasalaImg from "@/assets/garam-masala.jpg";
 import gallery1 from "@/assets/gallery-1.jpg";
 import gallery2 from "@/assets/gallery-2.jpg";
-import aboutImg from "@/assets/about-story.jpg";
-import productionImg from "@/assets/production.jpg";
+import aboutImg from "@/assets/gallery-1.jpg";
+import productionImg from "@/assets/gallery-2.jpg";
+import team1 from "@/assets/team1.jpg";
+import team2 from "@/assets/team2.jpg";
+import team3 from "@/assets/team3.jpg";
+import team4 from "@/assets/team4.jpg";
 import { X, Maximize2, Camera } from "lucide-react";
 
 const images = [
@@ -24,41 +28,73 @@ const images = [
   { src: gallery2, alt: "Traditional spice grinding", category: "Process" },
   { src: aboutImg, alt: "Spice market", category: "Heritage" },
   { src: productionImg, alt: "Modern production", category: "Process" },
+  { src: team3, alt: "Expert Member", category: "Team" },
+  { src: team4, alt: "Expert Member", category: "Team" },
+  { src: team1, alt: "Our Expert Team Member", category: "Team" },
+  { src: team2, alt: "Our Production Team", category: "Team" },
 ];
+
+const teamImages = [team1, team2, team3, team4, team1, team2, team3, team4];
+const productImages = [heroImg, turmericImg, chiliImg, cuminImg, corianderImg, garamMasalaImg, gallery1, gallery2];
 
 const Gallery = () => {
   const [lightbox, setLightbox] = useState<{ src: string, alt: string } | null>(null);
+
+  // Triple for seamless loop
+  const productsScroller = [...productImages, ...productImages, ...productImages];
+  const teamScroller = [...teamImages, ...teamImages, ...teamImages];
 
   return (
     <div className="bg-background min-h-screen">
       <PageHeader title="Visual Legacy" subtitle="Glimpses into our journey of purity, from heritage fields to your kitchen" />
 
-      <section className="py-20 bg-gradient-warm relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-64 h-64 bg-spice-red/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
-        <div className="container mx-auto px-4">
-          <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
-            {images.map((img, i) => (
-              <GsapReveal key={i} direction="up" delay={i * 0.05} className="break-inside-avoid">
-                <div
-                  className="group relative cursor-pointer overflow-hidden rounded-[2rem] shadow-xl hover:shadow-2xl transition-all duration-500 border border-spice-gold/10"
-                  onClick={() => setLightbox({ src: img.src, alt: img.alt })}
-                >
-                  <img
-                    src={img.src}
-                    alt={img.alt}
-                    className="w-full object-cover group-hover:scale-110 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-spice-dark/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
-                    <span className="text-spice-gold text-[10px] font-black uppercase tracking-[0.2em] mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">{img.category}</span>
-                    <div className="flex items-center justify-between translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">
-                      <h3 className="text-white font-display text-xl font-bold">{img.alt}</h3>
-                      <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white">
-                        <Maximize2 size={20} />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </GsapReveal>
+      {/* Product Slider - Left to Right */}
+      <section className="py-12 bg-gradient-warm overflow-hidden border-b border-spice-gold/10">
+        <div className="container mx-auto px-4 mb-10 text-center">
+          <h2 className="font-display text-3xl font-bold mb-3">Our Masterpieces</h2>
+          <p className="font-body text-muted-foreground max-w-2xl mx-auto">Explore the premium collection of our finest spice blends, crafted with tradition and purity to elevate your culinary experience.</p>
+        </div>
+        <div className="relative flex">
+          <div className="flex animate-infinite-scroll-reverse gap-6 min-w-full">
+            {productsScroller.map((src, i) => (
+              <div 
+                key={`prod-${i}`} 
+                onClick={() => setLightbox({ src, alt: "Spice Product" })}
+                className="w-48 h-64 sm:w-64 sm:h-80 flex-shrink-0 cursor-pointer rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl border border-spice-gold/20 group"
+              >
+                <img 
+                  src={src} 
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" 
+                  alt="Spice Product" 
+                  loading="lazy"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Team Slider - Right to Left */}
+      <section className="py-12 bg-spice-dark/5 overflow-hidden border-b border-spice-gold/10">
+        <div className="container mx-auto px-4 mb-10 text-center">
+          <h2 className="font-display text-3xl font-bold mb-3">Our Dedicated Team</h2>
+          <p className="font-body text-muted-foreground max-w-2xl mx-auto">The passion and expertise behind every pack of Dodke Masale, committed to delivering authentic Indian flavors to your kitchen.</p>
+        </div>
+        <div className="relative flex">
+          <div className="flex animate-infinite-scroll gap-6 min-w-full">
+            {teamScroller.map((src, i) => (
+              <div 
+                key={`team-${i}`} 
+                onClick={() => setLightbox({ src, alt: "Our Team" })}
+                className="w-48 h-64 sm:w-64 sm:h-80 flex-shrink-0 cursor-pointer rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl border border-spice-gold/20 group"
+              >
+                <img 
+                  src={src} 
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" 
+                  alt="Our Team" 
+                  loading="lazy"
+                />
+              </div>
             ))}
           </div>
         </div>
@@ -87,6 +123,7 @@ const Gallery = () => {
               alt={lightbox.alt} 
               className="max-w-full max-h-[75vh] object-contain rounded-3xl shadow-2xl border border-white/10" 
               onClick={(e) => e.stopPropagation()}
+              loading="lazy"
             />
             <div className="mt-8 text-center" onClick={(e) => e.stopPropagation()}>
               <h2 className="text-white font-display text-3xl font-bold mb-2">{lightbox.alt}</h2>

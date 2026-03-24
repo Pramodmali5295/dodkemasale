@@ -2,14 +2,14 @@ import { useEffect, useState, useRef } from "react";
 import PageHeader from "@/components/PageHeader";
 import GsapReveal from "@/components/GsapReveal";
 import aboutImg from "@/assets/home hero.png";
-import productionImg from "@/assets/production.jpg";
+import productionImg from "@/assets/gallery-2.jpg";
 import gsap from "gsap";
 import { Target, Eye, Heart, Award, Users, Package, CheckCircle, Zap } from "lucide-react";
 
 const stats = [
   { label: "Years of Legacy", value: 35, suffix: "+", color: "bg-spice-red/5 border-spice-red/20 text-spice-red" },
-  { label: "Premium Products", value: 50, suffix: "+", color: "bg-spice-orange/5 border-spice-orange/20 text-spice-orange" },
-  { label: "Happy Customers", value: 10, suffix: "K+", color: "bg-spice-gold/5 border-spice-gold/20 text-spice-gold" },
+  { label: "Premium Products", value: 26, suffix: "+", color: "bg-spice-orange/5 border-spice-orange/20 text-spice-orange" },
+  { label: "Customer Satisfaction", value: 100, suffix: "%", color: "bg-spice-gold/5 border-spice-gold/20 text-spice-gold" },
   { label: "Quality Checks", value: 100, suffix: "%", color: "bg-spice-green/5 border-spice-green/20 text-spice-green" },
 ];
 
@@ -70,17 +70,17 @@ const About = () => {
             </GsapReveal>
             
             <GsapReveal direction="right">
-              <span className="inline-block text-spice-red font-body font-bold text-sm uppercase tracking-[0.3em] mb-4">Crafting Excellence Since 1988</span>
+              <span className="inline-block text-spice-red font-body font-bold text-sm uppercase tracking-[0.3em] mb-4">Crafting Excellence</span>
             <h2 className="font-display text-4xl md:text-5xl font-bold mb-8 leading-tight text-spice-dark">The <span className="text-gradient-spice">Dodke Masale</span> Legacy</h2>
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
               <p>
-                The journey of Dodke Masale began more than three decades ago, fueled by a singular passion: to bring the authentic, unfiltered taste of traditional Indian kitchens to every household. What started as a small, family-run initiative in 1988 has today grown into a mark of purity and excellence in the world of spices.
+                Dodke Masale began with a passion to preserve the true taste of Indian spices. What started as a small family tradition has grown into a trusted name known for purity and quality.
               </p>
               <p>
-                Our philosophy is simple—nature provides the best flavors, and our job is to preserve them. Every spice is sourced directly from heritage farms where traditional cultivation methods are still practiced. We move beyond mass production, focusing instead on the 'Cold Grinding' technique that keeps the vital essential oils and deep aromas of each spice perfectly intact.
+                We carefully select our spices from reliable farmers and suppliers to ensure rich aroma, great taste, and consistency in every pack. Our process is designed to retain the natural oils, color, and freshness of each spice.
               </p>
               <p>
-                From our kitchen to yours, Dodke Masale is not just a brand; it is a promise of health, a tribute to tradition, and a celebration of the rich culinary heritage that defines us.
+                More than just a brand, Dodke Masale is our promise to deliver authentic flavors with care and quality to every kitchen.
               </p>
               <div className="pt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
@@ -102,12 +102,12 @@ const About = () => {
       {/* Statistics Section */}
       <section ref={statsRef} className="py-16 bg-gradient-warm relative z-10 overflow-hidden">
         <div className="container mx-auto px-4 max-w-5xl">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {stats.map((stat, i) => (
-              <GsapReveal key={stat.label} direction="up" delay={i * 0.1}>
-                <div className={`shadow-lg rounded-2xl p-6 md:p-8 text-center border-2 transition-all duration-500 hover:scale-105 group overflow-hidden relative ${stat.color} bg-white`}>
+              <GsapReveal key={stat.label} direction="up" delay={i * 0.1} className="h-full">
+                <div className={`shadow-lg rounded-2xl p-6 md:p-8 text-center border-2 transition-all duration-500 hover:scale-105 group overflow-hidden relative ${stat.color} bg-white h-full flex flex-col justify-center`}>
                   <div className={`absolute top-0 left-0 w-full h-1 opacity-20 bg-current`} />
-                  <p className="text-3xl md:text-5xl font-display font-black mb-2">
+                  <p className="text-3xl md:text-5xl font-display font-black mb-2 leading-none pt-2">
                     <StatCounter value={stat.value} suffix={stat.suffix} isActive={isStatsVisible} />
                   </p>
                   <p className="text-[10px] md:text-xs font-body font-black uppercase tracking-widest opacity-80 leading-tight">{stat.label}</p>
@@ -156,7 +156,6 @@ const About = () => {
               <div className="space-y-6">
                 {[
                   { icon: Users, title: "Direct Sourcing", desc: "Sourced directly from the finest spice farms across India." },
-                  { icon: Zap, title: "Cold Grinding", desc: "Processed at cold temperatures to retain natural oils." },
                   { icon: CheckCircle, title: "Lab Tested", desc: "Rigorous quality checks for purity and zero adulteration." },
                 ].map((item, i) => (
                   <div key={i} className="flex gap-5 items-start">
