@@ -2,7 +2,7 @@ import { useEffect, useState, useRef } from "react";
 import PageHeader from "@/components/PageHeader";
 import GsapReveal from "@/components/GsapReveal";
 import aboutImg from "@/assets/home hero.png";
-import productionImg from "@/assets/gallery-2.jpg";
+import productionImg from "@/assets/hero-spices.jpg";
 import gsap from "gsap";
 import { Target, Eye, Heart, Award, Users, Package, CheckCircle, Zap } from "lucide-react";
 

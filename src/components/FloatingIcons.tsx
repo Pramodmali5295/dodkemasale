@@ -15,10 +15,10 @@ const FloatingIcons = () => {
           href={social.link}
           target="_blank"
           rel="noopener noreferrer"
-          className={`${social.color} ${social.hover} text-white p-3.5 sm:p-4 rounded-full shadow-2xl transition-all duration-300 hover:scale-110 hover:-translate-y-1 group relative border border-white/20`}
+          className={`${social.color} ${social.hover} text-white p-2 sm:p-4 rounded-full shadow-2xl transition-all duration-300 hover:scale-110 hover:-translate-y-1 group relative border border-white/20`}
           aria-label={social.label}
         >
-          <social.icon size={20} className="sm:size-6" />
+          <social.icon size={16} className="sm:size-6" />
           <span className="hidden sm:block absolute right-full mr-4 top-1/2 -translate-y-1/2 px-4 py-2 bg-spice-dark/95 backdrop-blur-sm text-white text-[11px] font-black uppercase tracking-wider rounded-lg opacity-0 group-hover:opacity-100 transition-all translate-x-4 group-hover:translate-x-0 pointer-events-none shadow-2xl border border-white/10">
             {social.label}
           </span>

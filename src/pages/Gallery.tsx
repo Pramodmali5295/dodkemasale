@@ -1,100 +1,137 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import PageHeader from "@/components/PageHeader";
 import GsapReveal from "@/components/GsapReveal";
 import heroImg from "@/assets/hero-spices.jpg";
-import turmericImg from "@/assets/turmeric.jpg";
-import chiliImg from "@/assets/chili.jpg";
-import cuminImg from "@/assets/cumin.jpg";
-import corianderImg from "@/assets/coriander.jpg";
-import garamMasalaImg from "@/assets/garam-masala.jpg";
-import gallery1 from "@/assets/gallery-1.jpg";
-import gallery2 from "@/assets/gallery-2.jpg";
-import aboutImg from "@/assets/gallery-1.jpg";
-import productionImg from "@/assets/gallery-2.jpg";
+import product1 from "@/assets/product1.jpeg";
+import product2 from "@/assets/product2.jpeg";
+import product3 from "@/assets/product3.jpeg";
+import product4 from "@/assets/product4.jpeg";
+import product5 from "@/assets/product5.jpeg";
+import product6 from "@/assets/product6.jpeg";
+import product7 from "@/assets/product7.jpeg";
+import product8 from "@/assets/product8.jpeg";
+import product9 from "@/assets/product9.jpeg";
+import product10 from "@/assets/product10.jpeg";
+import product11 from "@/assets/product11.jpeg";
+import product12 from "@/assets/product12.jpeg";
+import product13 from "@/assets/product13.jpeg";
 import team1 from "@/assets/team1.jpg";
 import team2 from "@/assets/team2.jpeg";
 import team3 from "@/assets/team3.jpeg";
 import team4 from "@/assets/team4.jpeg";
-import { X, Maximize2, Camera } from "lucide-react";
+import { X, Camera, Grid, Users } from "lucide-react";
 
 const images = [
-  { src: heroImg, alt: "Premium spice collection", category: "Featured" },
-  { src: turmericImg, alt: "Turmeric powder", category: "Products" },
-  { src: chiliImg, alt: "Red chili powder", category: "Products" },
-  { src: cuminImg, alt: "Cumin seeds", category: "Raw" },
-  { src: corianderImg, alt: "Coriander powder", category: "Products" },
-  { src: garamMasalaImg, alt: "Garam masala blend", category: "Products" },
-  { src: gallery1, alt: "Assorted whole spices", category: "Heritage" },
-  { src: gallery2, alt: "Traditional spice grinding", category: "Process" },
-  { src: aboutImg, alt: "Spice market", category: "Heritage" },
-  { src: productionImg, alt: "Modern production", category: "Process" },
-  { src: team3, alt: "Expert Member", category: "Team" },
-  { src: team4, alt: "Expert Member", category: "Team" },
-  { src: team1, alt: "Our Expert Team Member", category: "Team" },
-  { src: team2, alt: "Our Production Team", category: "Team" },
+  { src: product1, alt: "Amchur Powder", category: "Products" },
+  { src: product2, alt: "Red Chilli Powder", category: "Products" },
+  { src: product4, alt: "Kitchen King", category: "Products" },
+  { src: product5, alt: "Turmeric Powder", category: "Products" },
+  { src: product6, alt: "Garam Masala", category: "Products" },
+  { src: product7, alt: "Pav Bhaji Masala", category: "Products" },
+  { src: product11, alt: "Raw Whole Organic", category: "Products" },
+  { src: product12, alt: "Variety of Spices", category: "Products" },
+  { src: product9, alt: "Black Pepper Powder", category: "Products" },
+  { src: product8, alt: "Coriander Powder", category: "Products" },
+  { src: product10, alt: "Spices for Indian", category: "Products" },
+  { src: product13, alt: "Whole Spices", category: "Products" },
+  { src: team1, alt: "Production Expert", category: "Team" },
+  { src: team2, alt: "Quality Control Team", category: "Team" },
+  { src: team3, alt: "Packaging Department", category: "Team" },
+  { src: team4, alt: "Distribution Team", category: "Team" },
 ];
-
-const teamImages = [team1, team2, team3, team4, team1, team2, team3, team4];
-const productImages = [heroImg, turmericImg, chiliImg, cuminImg, corianderImg, garamMasalaImg, gallery1, gallery2];
 
 const Gallery = () => {
   const [lightbox, setLightbox] = useState<{ src: string, alt: string } | null>(null);
 
-  // Triple for seamless loop
-  const productsScroller = [...productImages, ...productImages, ...productImages];
-  const teamScroller = [...teamImages, ...teamImages, ...teamImages];
+  const productImages = useMemo(() => images.filter(img => img.category !== "Team"), []);
+  const teamImages = useMemo(() => images.filter(img => img.category === "Team"), []);
 
   return (
     <div className="bg-background min-h-screen">
       <PageHeader title="Visual Legacy" subtitle="Glimpses into our journey of purity, from heritage fields to your kitchen" />
 
-      {/* Product Slider - Left to Right */}
-      <section className="py-12 bg-gradient-warm overflow-hidden border-b border-spice-gold/10">
-        <div className="container mx-auto px-4 mb-10 text-center">
-          <h2 className="font-display text-3xl font-bold mb-3">Our Masterpieces</h2>
-          <p className="font-body text-muted-foreground max-w-2xl mx-auto">Explore the premium collection of our finest spice blends, crafted with tradition and purity to elevate your culinary experience.</p>
-        </div>
-        <div className="relative flex">
-          <div className="flex animate-infinite-scroll-reverse gap-6 min-w-full">
-            {productsScroller.map((src, i) => (
-              <div 
+      {/* Product Section */}
+      <section className="py-12 bg-gradient-warm border-b border-spice-gold/10">
+        <div className="container mx-auto px-4">
+          <GsapReveal className="mb-10 text-center">
+            <div className="flex items-center justify-center gap-2 mb-4">
+              <div className="h-px w-8 bg-spice-gold" />
+              <Grid size={18} className="text-spice-gold" />
+              <span className="text-spice-gold font-display font-bold uppercase tracking-widest text-sm">Fine Selection</span>
+              <div className="h-px w-8 bg-spice-gold" />
+            </div>
+            <h2 className="font-display text-4xl md:text-5xl font-bold mb-4">Our Masterpieces</h2>
+            <p className="font-body text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
+              Explore the premium collection of our finest spice blends, crafted with tradition and purity to elevate your culinary experience.
+            </p>
+          </GsapReveal>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {productImages.map((img, i) => (
+              <GsapReveal 
                 key={`prod-${i}`} 
-                onClick={() => setLightbox({ src, alt: "Spice Product" })}
-                className="w-48 h-64 sm:w-64 sm:h-80 flex-shrink-0 cursor-pointer rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl border border-spice-gold/20 group"
+                delay={i * 0.1}
+                direction="scale"
+                className="group"
               >
-                <img 
-                  src={src} 
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" 
-                  alt="Spice Product" 
-                  loading="lazy"
-                />
-              </div>
+                <div 
+                  onClick={() => setLightbox({ src: img.src, alt: img.alt })}
+                  className="relative cursor-pointer rounded-xl overflow-hidden shadow-lg border border-spice-gold/10 hover:shadow-2xl transition-all duration-300 aspect-[4/3] group"
+                >
+                  <img 
+                    src={img.src} 
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
+                    alt={img.alt} 
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
+                    <span className="text-white font-display font-extrabold text-[14px] sm:text-[18px] uppercase tracking-widest leading-none text-center">
+                      {img.alt}
+                    </span>
+                  </div>
+                </div>
+              </GsapReveal>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Team Slider - Right to Left */}
-      <section className="py-12 bg-spice-dark/5 overflow-hidden border-b border-spice-gold/10">
-        <div className="container mx-auto px-4 mb-10 text-center">
-          <h2 className="font-display text-3xl font-bold mb-3">Our Dedicated Team</h2>
-          <p className="font-body text-muted-foreground max-w-2xl mx-auto">The passion and expertise behind every pack of Dodke Masale, committed to delivering authentic Indian flavors to your kitchen.</p>
-        </div>
-        <div className="relative flex">
-          <div className="flex animate-infinite-scroll gap-6 min-w-full">
-            {teamScroller.map((src, i) => (
-              <div 
+      {/* Team Section */}
+      <section className="py-12 bg-spice-dark/5 border-b border-spice-gold/10">
+        <div className="container mx-auto px-4">
+          <GsapReveal className="mb-10 text-center">
+            <div className="flex items-center justify-center gap-2 mb-4">
+              <div className="h-px w-8 bg-spice-gold" />
+              <Users size={18} className="text-spice-gold" />
+              <span className="text-spice-gold font-display font-bold uppercase tracking-widest text-sm">Human Touch</span>
+              <div className="h-px w-8 bg-spice-gold" />
+            </div>
+            <h2 className="font-display text-4xl md:text-5xl font-bold mb-4">Our Dedicated Team</h2>
+            <p className="font-body text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
+              The passion and expertise behind every pack of Dodke Masale, committed to delivering authentic Indian flavors to your kitchen.
+            </p>
+          </GsapReveal>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {teamImages.map((img, i) => (
+              <GsapReveal 
                 key={`team-${i}`} 
-                onClick={() => setLightbox({ src, alt: "Our Team" })}
-                className="w-48 h-64 sm:w-64 sm:h-80 flex-shrink-0 cursor-pointer rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl border border-spice-gold/20 group"
+                delay={i * 0.1}
+                direction="up"
+                className="group"
               >
-                <img 
-                  src={src} 
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" 
-                  alt="Our Team" 
-                  loading="lazy"
-                />
-              </div>
+                <div 
+                  onClick={() => setLightbox({ src: img.src, alt: img.alt })}
+                  className="relative cursor-pointer rounded-xl overflow-hidden shadow-lg border border-spice-gold/10 hover:shadow-2xl transition-all duration-300 aspect-[3/4]"
+                >
+                  <img 
+                    src={img.src} 
+                    className="w-full h-full object-cover transition-transform duration-500" 
+                    alt={img.alt} 
+                    loading="lazy"
+                  />
+                </div>
+              </GsapReveal>
             ))}
           </div>
         </div>
@@ -125,10 +162,6 @@ const Gallery = () => {
               onClick={(e) => e.stopPropagation()}
               loading="lazy"
             />
-            <div className="mt-8 text-center" onClick={(e) => e.stopPropagation()}>
-              <h2 className="text-white font-display text-3xl font-bold mb-2">{lightbox.alt}</h2>
-              <div className="w-12 h-1 bg-gradient-spice mx-auto rounded-full" />
-            </div>
           </div>
         </div>
       )}
@@ -137,3 +170,4 @@ const Gallery = () => {
 };
 
 export default Gallery;
+

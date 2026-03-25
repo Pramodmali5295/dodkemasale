@@ -1,27 +1,100 @@
 import PageHeader from "@/components/PageHeader";
 import GsapReveal from "@/components/GsapReveal";
-import turmericImg from "@/assets/turmeric.jpg";
-import chiliImg from "@/assets/chili.jpg";
-import cuminImg from "@/assets/cumin.jpg";
-import corianderImg from "@/assets/coriander.jpg";
-import garamMasalaImg from "@/assets/garam-masala.jpg";
-import galleryImg from "@/assets/gallery-1.jpg";
+import product1 from "@/assets/product1.jpeg";
+import product2 from "@/assets/product2.jpeg";
+import product3 from "@/assets/product3.jpeg";
+import product4 from "@/assets/product4.jpeg";
+import product5 from "@/assets/product5.jpeg";
+import product6 from "@/assets/product6.jpeg";
+import product7 from "@/assets/product7.jpeg";
+import product8 from "@/assets/product8.jpeg";
+import product9 from "@/assets/product9.jpeg";
+import product10 from "@/assets/product10.jpeg";
+import product11 from "@/assets/product11.jpeg";
+import product12 from "@/assets/product12.jpeg";
+import product13 from "@/assets/product13.jpeg";
 import { Link } from "react-router-dom";
-import { CheckCircle, ArrowRight, Package } from "lucide-react";
+import { CheckCircle, ArrowRight } from "lucide-react";
 
 const products = [
-  { name: "Turmeric Powder", category: "Spice Powder", desc: "Pure golden haldi, rich in curcumin for daily cooking and medicinal benefits.", img: turmericImg, badge: "Bestseller" },
-  { name: "Red Chili Powder", category: "Spice Powder", desc: "Fiery red mirchi powder made from carefully selected Guntur chilies.", img: chiliImg, badge: "Pure Heat" },
-  { name: "Cumin Seeds", category: "Whole Spice", desc: "Premium aromatic jeera, perfect for essential tempering and seasoning.", img: cuminImg },
-  { name: "Coriander Powder", category: "Spice Powder", desc: "Finely ground dhania with a signature fresh and earthy aroma.", img: corianderImg },
-  { name: "Garam Masala", category: "Signature Blend", desc: "A royal secret blend of cardamom, cinnamon, cloves and more.", img: garamMasalaImg, badge: "Chef's Choice" },
-  { name: "Kitchen King Masala", category: "Signature Blend", desc: "The ultimate all-purpose spice blend that elevates every single dish.", img: galleryImg },
-  { name: "Chole Masala", category: "Signature Blend", desc: "North Indian style blend for authentic chickpea curry flavor.", img: turmericImg },
-  { name: "Pav Bhaji Masala", category: "Signature Blend", desc: "Signature Mumbai street food flavor with premium blend of spices.", img: chiliImg, badge: "New Arrival" },
-  { name: "Black Pepper Powder", category: "Spice Powder", desc: "Boldly ground black pepper for a sharp, pungent kick.", img: cuminImg },
-  { name: "Pav Bhaji Masala", category: "Signature Blend", desc: "The soul of Mumbai's favorite Pav Bhaji in every pinch.", img: garamMasalaImg },
-  { name: "Biryani Masala", category: "Signature Blend", desc: "Aromatic blend of whole spices for the perfect royal biryani.", img: corianderImg, badge: "Popular" },
-  { name: "Amchur Powder", category: "Spice Powder", desc: "Zesty dry mango powder for that perfect tang in your chats.", img: turmericImg },
+  { 
+    name: "Amchur Powder", 
+    category: "Spice Powder", 
+    desc: "Zesty dry mango powder for that perfect tang in your chats.", 
+    img: product1, 
+  },
+  { 
+    name: "Red Chilli Powder", 
+    category: "Spice Powder", 
+    desc: "Fiery red mirchi powder made from carefully selected Guntur chilies.", 
+    img: product2, 
+  },
+  { 
+    name: "Kitchen King", 
+    category: "Signature Blend", 
+    desc: "The ultimate all-purpose spice blend that elevates every single dish.", 
+    img: product4 
+  },
+  { 
+    name: "Turmeric Powder", 
+    category: "Spice Powder", 
+    desc: "Pure golden haldi, rich in curcumin for daily cooking and medicinal benefits.", 
+    img: product5, 
+  },
+  { 
+    name: "Garam Masala", 
+    category: "Signature Blend", 
+    desc: "A royal secret blend of cardamom, cinnamon, cloves and more.", 
+    img: product6 
+  },
+  { 
+    name: "Pav Bhaji Masala", 
+    category: "Signature Blend", 
+    desc: "Signature Mumbai street food flavor with premium blend of spices.", 
+    img: product7, 
+  },
+  { 
+    name: "Raw Whole Organic", 
+    category: "Whole Spice", 
+    desc: "Unprocessed, farm-fresh whole spices for maximum flavor and health.", 
+    img: product11 
+  },
+  { 
+    name: "Variety of Spices", 
+    category: "Spice Collection", 
+    desc: "A wide assortment of premium spices to stock up your kitchen shelf.", 
+    img: product12 
+  },
+  { 
+    name: "Black Pepper Powder", 
+    category: "Spice Powder", 
+    desc: "Boldly ground black pepper for a sharp, pungent kick.", 
+    img: product9 
+  },
+  { 
+    name: "Coriander Powder", 
+    category: "Spice Powder", 
+    desc: "Finely ground dhania with a signature fresh and earthy aroma.", 
+    img: product8 
+  },
+  { 
+    name: "Spices for Indian", 
+    category: "Signature Blend", 
+    desc: "A curated collection of essential spices for authentic Indian cooking.", 
+    img: product10 
+  },
+  { 
+    name: "Whole Spices", 
+    category: "Whole Spice", 
+    desc: "Premium quality whole spices sourced directly from the finest farms.", 
+    img: product13 
+  },
+  { 
+    name: "Biryani Masala", 
+    category: "Signature Blend", 
+    desc: "Aromatic blend of whole spices for the perfect royal biryani.", 
+    img: product3,
+  },
 ];
 
 const Products = () => (
@@ -35,19 +108,12 @@ const Products = () => (
           {products.map((p, i) => (
             <GsapReveal key={p.name} direction="up" delay={i * 0.1}>
               <div className="group h-full bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl hover:shadow-spice/20 transition-all duration-500 border border-spice-gold/10">
-                <div className="relative overflow-hidden aspect-square">
+                <div className="relative overflow-hidden aspect-[4/3]">
                   <img
                     src={p.img}
                     alt={p.name}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
-                  {p.badge && (
-                    <div className="absolute top-4 left-4">
-                      <span className="bg-gradient-spice text-white text-[10px] font-black uppercase tracking-widest px-4 py-1.5 rounded-full shadow-lg">
-                        {p.badge}
-                      </span>
-                    </div>
-                  )}
                 </div>
                 
                 <div className="p-6">

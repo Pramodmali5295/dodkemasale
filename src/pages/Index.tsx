@@ -6,19 +6,19 @@ import { ArrowRight, Leaf, Shield, Award, Star } from "lucide-react";
 import GsapReveal from "@/components/GsapReveal";
 import SectionTitle from "@/components/SectionTitle";
 import heroImg from "@/assets/hero-spices.jpg";
-import turmericImg from "@/assets/turmeric.jpg";
-import chiliImg from "@/assets/chili.jpg";
-import cuminImg from "@/assets/cumin.jpg";
-import garamMasalaImg from "@/assets/garam-masala.jpg";
+import product1 from "@/assets/product1.jpeg";
+import product2 from "@/assets/product2.jpeg";
+import product3 from "@/assets/product3.jpeg";
+import product4 from "@/assets/product4.jpeg";
 import logoImg from "@/assets/favlogo.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const featuredProducts = [
-  { name: "Turmeric Powder", desc: "Pure & vibrant haldi for daily cooking", img: turmericImg },
-  { name: "Red Chili Powder", desc: "Bold & fiery mirchi for authentic heat", img: chiliImg },
-  { name: "Cumin Seeds", desc: "Aromatic jeera for perfect tempering", img: cuminImg },
-  { name: "Garam Masala", desc: "Royal blend of finest whole spices", img: garamMasalaImg },
+  { name: "Amchur Powder", desc: "Zesty dry mango powder for that perfect Indian tang", img: product1 },
+  { name: "Red Chilli Powder", desc: "Bold & fiery mirchi for authentic heat", img: product2 },
+  { name: "Biryani Masala", desc: "Royal blend of finest whole spices for biryani", img: product3 },
+  { name: "Kitchen King", desc: "The ultimate all-purpose spice blend for every dish", img: product4 },
 ];
 
 const whyUs = [
@@ -112,11 +112,11 @@ const Index = () => {
           <div className="flex animate-infinite-scroll gap-8 min-w-full">
             {[...featuredProducts, ...featuredProducts].map((p, i) => (
               <div key={`${p.name}-${i}`} className="flex-shrink-0 w-72 group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-spice-gold/5">
-                <div className="overflow-hidden aspect-square relative">
+                <div className="overflow-hidden aspect-[4/3] relative bg-white flex items-center justify-center p-4">
                   <img
                     src={p.img}
                     alt={p.name}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    className={`max-w-full max-h-full w-auto h-auto ${p.name === "Biryani Masala" ? "object-cover w-full h-full" : "object-contain"} group-hover:scale-110 transition-transform duration-500`}
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-spice-dark/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />

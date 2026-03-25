@@ -8,7 +8,7 @@ interface SectionTitleProps {
 }
 
 const SectionTitle = ({ title, subtitle, light, triggerOnMount }: SectionTitleProps) => (
-  <div className="text-center mb-12 overflow-hidden">
+  <div className="text-center mb-8 sm:mb-12 overflow-hidden">
     <GsapReveal direction="left" triggerOnMount={triggerOnMount}>
       <h2 className={`font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4 ${light ? "text-spice-cream" : "text-foreground"}`}>
         {title}
