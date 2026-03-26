@@ -10,7 +10,6 @@ import product7 from "@/assets/product7.jpeg";
 import product8 from "@/assets/product8.jpeg";
 import product9 from "@/assets/product9.jpeg";
 import product12 from "@/assets/product12.jpeg";
-import product13 from "@/assets/product13.jpeg";
 import product15 from "@/assets/product15.png";
 import { Link } from "react-router-dom";
 import { CheckCircle, ArrowRight } from "lucide-react";
@@ -35,6 +34,24 @@ const products = [
     img: product8 
   },
   { 
+    name: "Garam Masala", 
+    category: "Signature Blend", 
+    desc: "A royal secret blend of cardamom, cinnamon, cloves and more.", 
+    img: product6 
+  },
+  { 
+    name: "Kanda Lasun Masala", 
+    category: "Signature Blend", 
+    desc: "A bold and spicy traditional Maharashtrian blend of onion, garlic, and hand-pounded spices.", 
+    img: product15 
+  },
+  { 
+    name: "Kitchen King", 
+    category: "Signature Blend", 
+    desc: "The ultimate all-purpose spice blend that elevates every single dish.", 
+    img: product4 
+  },
+  { 
     name: "Amchur Powder", 
     category: "Spice Powder", 
     desc: "Zesty dry mango powder for that perfect tang in your chats.", 
@@ -47,34 +64,10 @@ const products = [
     img: product9 
   },
   { 
-    name: "Kitchen King", 
+    name: "Non Veg Masala", 
     category: "Signature Blend", 
-    desc: "The ultimate all-purpose spice blend that elevates every single dish.", 
-    img: product4 
-  },
-  { 
-    name: "Garam Masala", 
-    category: "Signature Blend", 
-    desc: "A royal secret blend of cardamom, cinnamon, cloves and more.", 
-    img: product6 
-  },
-  { 
-    name: "Pav Bhaji Masala", 
-    category: "Signature Blend", 
-    desc: "Signature Mumbai street food flavor with premium blend of spices.", 
+    desc: "A rich and robust spice blend crafted for the perfect authentic meat curries.", 
     img: product7, 
-  },
-  { 
-    name: "Variety of Spices", 
-    category: "Spice Collection", 
-    desc: "A wide assortment of premium spices to stock up your kitchen shelf.", 
-    img: product12 
-  },
-  { 
-    name: "Other Spices", 
-    category: "Other Spices", 
-    desc: "Premium quality whole spices sourced directly from the finest farms.", 
-    img: product13 
   },
   { 
     name: "Biryani Masala", 
@@ -83,10 +76,10 @@ const products = [
     img: product3,
   },
   { 
-    name: "Kanda Lasun Masala", 
-    category: "Signature Blend", 
-    desc: "A bold and spicy traditional Maharashtrian blend of onion, garlic, and hand-pounded spices.", 
-    img: product15 
+    name: "Variety of Spices", 
+    category: "Spice Collection", 
+    desc: "A wide assortment of premium spices to stock up your kitchen shelf.", 
+    img: product12 
   },
 ];
 

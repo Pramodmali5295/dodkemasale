@@ -12,7 +12,6 @@ import product7 from "@/assets/product7.jpeg";
 import product8 from "@/assets/product8.jpeg";
 import product9 from "@/assets/product9.jpeg";
 import product12 from "@/assets/product12.jpeg";
-import product13 from "@/assets/product13.jpeg";
 import product15 from "@/assets/product15.png";
 import team1 from "@/assets/team1.jpg";
 import team2 from "@/assets/team2.jpeg";
@@ -24,15 +23,14 @@ const images = [
   { src: product5, alt: "Turmeric Powder", category: "Products" },
   { src: product2, alt: "Red Chilli Powder", category: "Products" },
   { src: product8, alt: "Coriander Powder", category: "Products" },
+  { src: product6, alt: "Garam Masala", category: "Products" },
+  { src: product15, alt: "Kanda Lasun Masala", category: "Products" },
+  { src: product4, alt: "Kitchen King", category: "Products" },
   { src: product1, alt: "Amchur Powder", category: "Products" },
   { src: product9, alt: "Black Pepper Powder", category: "Products" },
-  { src: product4, alt: "Kitchen King", category: "Products" },
-  { src: product6, alt: "Garam Masala", category: "Products" },
-  { src: product7, alt: "Pav Bhaji Masala", category: "Products" },
-  { src: product12, alt: "Variety of Spices", category: "Products" },
-  { src: product13, alt: "Other Spices", category: "Products" },
+  { src: product7, alt: "Non Veg Masala", category: "Products" },
   { src: product3, alt: "Biryani Masala", category: "Products" },
-  { src: product15, alt: "Kanda Lasun Masala", category: "Products" },
+  { src: product12, alt: "Variety of Spices", category: "Products" },
   { src: team1, alt: "Production Expert", category: "Team" },
   { src: team2, alt: "Quality Control Team", category: "Team" },
   { src: team3, alt: "Packaging Department", category: "Team" },

@@ -45,7 +45,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop */}
-        <div className="hidden lg:flex items-center gap-6">
+        <div className="hidden xl:flex items-center gap-6">
           {navLinks.slice(0, -1).map((link) => (
             <Link
               key={link.to}
@@ -70,7 +70,7 @@ const Navbar = () => {
         {/* Mobile toggle */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="lg:hidden text-white p-2 shrink-0 bg-white/5 rounded-lg border border-white/10"
+          className="xl:hidden text-white p-2 shrink-0 bg-white/5 rounded-lg border border-white/10"
           aria-label="Toggle menu"
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -79,7 +79,7 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {isOpen && (
-        <div className="lg:hidden bg-spice-dark/98 backdrop-blur-md border-t border-spice-gold/20">
+        <div className="xl:hidden bg-spice-dark/98 backdrop-blur-md border-t border-spice-gold/20">
           <div className="container mx-auto px-4 py-6 flex flex-col gap-4">
             {navLinks.slice(0, -1).map((link) => (
               <Link
