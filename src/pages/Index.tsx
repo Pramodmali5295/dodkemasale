@@ -10,15 +10,32 @@ import heroImg from "@/assets/hero-spices.jpg";
 import product2 from "@/assets/product2.jpeg";
 import product3 from "@/assets/product3.jpeg";
 import product4 from "@/assets/product4.jpeg";
+import product5 from "@/assets/product5.jpeg";
+import product6 from "@/assets/product6.jpeg";
+import product7 from "@/assets/product7.jpeg";
+import product8 from "@/assets/product8.jpeg";
+import product9 from "@/assets/product9.jpeg";
+import product11 from "@/assets/product11.jpeg";
+import product12 from "@/assets/product12.jpeg";
+import product15 from "@/assets/product15.png";
+import product16 from "@/assets/product16.jpeg";
 import logoImg from "@/assets/favlogo.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const featuredProducts = [
-
-  { name: "Red Chilli Powder", desc: "Bold & fiery mirchi for authentic heat", img: product2 },
-  { name: "Biryani Masala", desc: "Royal blend of finest whole spices for biryani", img: product3 },
-  { name: "Kitchen King", desc: "The ultimate all-purpose spice blend for every dish", img: product4 },
+  { name: "Turmeric Powder", desc: "Pure golden haldi, rich in curcumin for daily cooking and medicinal benefits.", img: product5 },
+  { name: "Red Chilli Powder", desc: "Fiery red mirchi powder made from Guntur chilies.", img: product2 },
+  { name: "Coriander Powder", desc: "Finely ground dhania with fresh and earthy aroma.", img: product8 },
+  { name: "Garam Masala", desc: "A royal secret blend of cardamom, cinnamon, cloves and more.", img: product6 },
+  { name: "Kanda Lasun Masala", desc: "Traditional Maharashtrian blend of onion, garlic, and spices.", img: product15 },
+  { name: "Kitchen King", desc: "The ultimate all-purpose spice blend for every dish.", img: product4 },
+  { name: "Non Veg Masala", desc: "A rich and robust spice blend crafted for meat curries.", img: product7 },
+  { name: "Biryani Masala", desc: "Aromatic blend of whole spices for the perfect royal biryani.", img: product3 },
+  { name: "Kala Masala", desc: "Authentic traditional Maharashtrian roasted spice blend.", img: product16 },
+  { name: "Black Pepper Powder", desc: "Boldly ground black pepper for a sharp, pungent kick.", img: product9 },
+  { name: "Variety of Spices", desc: "A wide assortment of premium spices for your kitchen.", img: product12 },
+  { name: "Whole Spices", desc: "Unprocessed, farm-fresh whole spices for maximum health.", img: product11 },
 ];
 
 const whyUs = [
