@@ -45,6 +45,7 @@ const Footer = () => {
                 { to: "/products", label: "Products" },
                 { to: "/why-choose-us", label: "Why Choose Us" },
                 { to: "/gallery", label: "Gallery" },
+                { to: "/team", label: "Our Team" },
                 { to: "/testimonials", label: "Testimonials" },
                 { to: "/contact", label: "Contact" },
               ].map((l) => (
