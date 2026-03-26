@@ -8,7 +8,7 @@ interface PageHeaderProps {
 
 const PageHeader = ({ title, subtitle }: PageHeaderProps) => {
   return (
-    <section className="relative h-[50vh] flex items-center justify-center pt-20">
+    <section className="relative min-h-[300px] h-[40vh] md:h-[50vh] flex items-center justify-center pt-20">
       <div className="absolute inset-0">
         <img src={heroImg} alt="Banner" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-spice-dark/70 via-spice-dark/40 to-spice-dark/20" />

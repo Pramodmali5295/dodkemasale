@@ -9,6 +9,7 @@ const navLinks = [
   { to: "/products", label: "Products" },
   { to: "/why-choose-us", label: "Why Choose Us" },
   { to: "/gallery", label: "Gallery" },
+  { to: "/team", label: "Our Team" },
   { to: "/testimonials", label: "Testimonials" },
   { to: "/contact", label: "Contact" },
 ];
@@ -37,15 +38,15 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-1 sm:gap-3 shrink-1 min-w-0">
-          <img src={logoImg} alt="Dodke Masale" className="w-8 h-8 sm:w-16 sm:h-16 object-contain" />
-          <span className="font-display text-base xs:text-lg sm:text-xl lg:text-2xl font-bold text-spice-gold tracking-wider whitespace-nowrap overflow-hidden text-ellipsis">
-            Dodke Masale <sup className="text-[10px] sm:text-xs text-spice-gold/80">TM</sup>
+        <Link to="/" className="flex items-center gap-1 sm:gap-2 shrink-1 min-w-0">
+          <img src={logoImg} alt="Dodke Masale" className="w-8 h-8 xs:w-10 xs:h-10 sm:w-14 sm:h-14 lg:w-16 lg:h-16 object-contain" />
+          <span className="font-display text-xs xs:text-sm sm:text-lg lg:text-xl xl:text-2xl font-bold text-spice-gold tracking-wider whitespace-nowrap overflow-hidden text-ellipsis">
+            Dodke Masale <sup className="text-[8px] sm:text-xs text-spice-gold/80">TM</sup>
           </span>
         </Link>
 
         {/* Desktop */}
-        <div className="hidden xl:flex items-center gap-6">
+        <div className="hidden lg:flex items-center gap-4 xl:gap-6">
           {navLinks.slice(0, -1).map((link) => (
             <Link
               key={link.to}
@@ -70,7 +71,7 @@ const Navbar = () => {
         {/* Mobile toggle */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="xl:hidden text-white p-2 shrink-0 bg-white/5 rounded-lg border border-white/10"
+          className="lg:hidden text-white p-2 shrink-0 bg-white/5 rounded-lg border border-white/10"
           aria-label="Toggle menu"
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -79,7 +80,7 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {isOpen && (
-        <div className="xl:hidden bg-spice-dark/98 backdrop-blur-md border-t border-spice-gold/20">
+        <div className="lg:hidden bg-spice-dark/98 backdrop-blur-md border-t border-spice-gold/20">
           <div className="container mx-auto px-4 py-6 flex flex-col gap-4">
             {navLinks.slice(0, -1).map((link) => (
               <Link

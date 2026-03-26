@@ -13,8 +13,8 @@ const Footer = () => {
 
   return (
     <footer className="bg-spice-dark text-white pt-10 pb-4 border-t border-spice-gold/10 overflow-hidden">
-      <div className="w-full px-4 md:px-12 lg:px-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-8">
+      <div className="w-full px-4 sm:px-8 md:px-12 lg:px-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 mb-8">
           {/* Brand & Social */}
           <div className="space-y-4">
             <Link to="/" onClick={scrollToTop} className="flex items-center gap-3 group">

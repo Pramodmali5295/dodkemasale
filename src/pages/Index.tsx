@@ -94,11 +94,11 @@ const Index = () => {
               fetchPriority="high"
             />
           </div>
-          <h1 className="hero-title font-display text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-spice-cream leading-tight mb-6">
+          <h1 className="hero-title font-display text-2xl xs:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-spice-cream leading-tight mb-6">
             The Authentic Taste of <br />
             <span className="text-gradient-spice">Indian Spices</span>
           </h1>
-          <p className="hero-sub font-body text-base sm:text-lg md:text-xl text-spice-cream/80 max-w-2xl mx-auto mb-8">
+          <p className="hero-sub font-body text-sm sm:text-lg md:text-xl text-spice-cream/80 max-w-2xl mx-auto mb-8 px-4 sm:px-0">
             Crafted with tradition, packed with purity. Dodke Masale brings you the finest spices sourced directly from Indian farms.
           </p>
           <div className="hero-cta flex flex-wrap gap-4 justify-center">
@@ -125,10 +125,10 @@ const Index = () => {
         </div>
         
         {/* Infinite Scroller Container */}
-        <div className="relative flex overflow-hidden">
-          <div className="flex animate-infinite-scroll gap-8 min-w-full">
+        <div className="relative flex overflow-hidden py-4">
+          <div className="flex animate-infinite-scroll gap-4 sm:gap-8 min-w-full">
             {[...featuredProducts, ...featuredProducts].map((p, i) => (
-              <div key={`${p.name}-${i}`} className="flex-shrink-0 w-72 group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-spice-gold/5">
+              <div key={`${p.name}-${i}`} className="flex-shrink-0 w-64 sm:w-72 group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-spice-gold/5">
                 <div className="overflow-hidden aspect-[4/3] relative bg-white flex items-center justify-center p-4">
                   <img
                     src={p.img}
@@ -138,9 +138,9 @@ const Index = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-spice-dark/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
-                <div className="p-6 text-center bg-white">
-                  <h3 className="font-display text-lg font-bold text-spice-dark mb-1">{p.name}</h3>
-                  <p className="font-body text-muted-foreground text-xs italic">{p.desc}</p>
+                <div className="p-4 sm:p-6 text-center bg-white">
+                  <h3 className="font-display text-base sm:text-lg font-bold text-spice-dark mb-1">{p.name}</h3>
+                  <p className="font-body text-muted-foreground text-[10px] sm:text-xs italic line-clamp-2">{p.desc}</p>
                 </div>
               </div>
             ))}

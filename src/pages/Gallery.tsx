@@ -14,11 +14,7 @@ import product9 from "@/assets/product9.jpeg";
 import product11 from "@/assets/product11.jpeg";
 import product12 from "@/assets/product12.jpeg";
 import product15 from "@/assets/product15.png";
-import team1 from "@/assets/team1.jpg";
-import team2 from "@/assets/team2.jpeg";
-import team3 from "@/assets/team3.jpeg";
-import team4 from "@/assets/team4.jpeg";
-import { X, Camera, Grid, Users } from "lucide-react";
+import { X, Camera, Grid } from "lucide-react";
 
 const images = [
   { src: product5, alt: "Turmeric Powder", category: "Products" },
@@ -33,17 +29,12 @@ const images = [
   { src: product9, alt: "Black Pepper Powder", category: "Products" },
   { src: product12, alt: "Variety of Spices", category: "Products" },
   { src: product11, alt: "Whole Spices", category: "Products" },
-  { src: team1, alt: "Aniket D", category: "Team", name: "Aniket D", role: "Founder" },
-  { src: team2, alt: "Harshada A", category: "Team", name: "Harshada A", role: "Operations Manager" },
-  { src: team3, alt: "Prajakta K", category: "Team", name: "Prajakta K", role: "Finance & Accounts Manager" },
-  { src: team4, alt: "Gayatri F", category: "Team", name: "Gayatri F", role: "Sales & Marketing Head" },
 ];
 
 const Gallery = () => {
   const [lightbox, setLightbox] = useState<{ src: string, alt: string } | null>(null);
 
-  const productImages = useMemo(() => images.filter(img => img.category !== "Team"), []);
-  const teamImages = useMemo(() => images.filter(img => img.category === "Team"), []);
+  const productImages = useMemo(() => images.filter(img => img.category === "Products"), []);
 
   return (
     <div className="bg-background min-h-screen">
@@ -94,51 +85,7 @@ const Gallery = () => {
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="py-12 bg-spice-dark/5 border-b border-spice-gold/10">
-        <div className="container mx-auto px-4">
-          <GsapReveal className="mb-10 text-center">
-            <div className="flex items-center justify-center gap-2 mb-4">
-              <div className="h-px w-8 bg-spice-gold" />
-              <span className="text-spice-gold font-display font-bold uppercase tracking-widest text-sm">Human Touch</span>
-              <div className="h-px w-8 bg-spice-gold" />
-            </div>
-            <h2 className="font-display text-4xl md:text-5xl font-bold mb-4">Our Dedicated Team</h2>
-            <p className="font-body text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
-              The passion and expertise behind every pack of Dodke Masale, committed to delivering authentic Indian flavors to your kitchen.
-            </p>
-          </GsapReveal>
 
-          <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
-            {teamImages.map((img, i) => (
-              <GsapReveal 
-                key={`team-${i}`} 
-                delay={i * 0.1}
-                direction="up"
-                className="group"
-              >
-                <div className="space-y-3">
-                  <div 
-                    onClick={() => setLightbox({ src: img.src, alt: img.alt })}
-                    className="relative cursor-pointer rounded-xl overflow-hidden shadow-lg border border-spice-gold/10 hover:shadow-2xl transition-all duration-300 aspect-[3/4]"
-                  >
-                    <img 
-                      src={img.src} 
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
-                      alt={img.alt} 
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="text-center">
-                    <h4 className="font-display font-bold text-spice-dark text-lg leading-tight mb-1">{(img as any).name}</h4>
-                    <p className="font-body text-spice-red font-bold text-xs uppercase tracking-wider">{(img as any).role}</p>
-                  </div>
-                </div>
-              </GsapReveal>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Lightbox */}
       {lightbox && (
