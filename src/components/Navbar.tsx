@@ -39,8 +39,8 @@ const Navbar = () => {
       <div className="container mx-auto px-4 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-1 sm:gap-3 shrink-1 min-w-0">
           <img src={logoImg} alt="Dodke Masale" className="w-8 h-8 sm:w-16 sm:h-16 object-contain" />
-          <span className="font-display text-[14px] xs:text-base sm:text-xl lg:text-2xl font-bold text-spice-gold tracking-wider whitespace-nowrap overflow-hidden text-ellipsis">
-            Dodke Masale <sup className="text-[8px] sm:text-xs text-spice-gold/80">TM</sup>
+          <span className="font-display text-base xs:text-lg sm:text-xl lg:text-2xl font-bold text-spice-gold tracking-wider whitespace-nowrap overflow-hidden text-ellipsis">
+            Dodke Masale <sup className="text-[10px] sm:text-xs text-spice-gold/80">TM</sup>
           </span>
         </Link>
 

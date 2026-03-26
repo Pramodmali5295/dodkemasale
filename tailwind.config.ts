@@ -13,6 +13,9 @@ export default {
       },
     },
     extend: {
+      screens: {
+        xs: "480px",
+      },
       fontFamily: {
         display: ["Playfair Display", "serif"],
         body: ["Nunito Sans", "sans-serif"],

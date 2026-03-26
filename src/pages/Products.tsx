@@ -9,19 +9,18 @@ import product6 from "@/assets/product6.jpeg";
 import product7 from "@/assets/product7.jpeg";
 import product8 from "@/assets/product8.jpeg";
 import product9 from "@/assets/product9.jpeg";
-import product10 from "@/assets/product10.jpeg";
-import product11 from "@/assets/product11.jpeg";
 import product12 from "@/assets/product12.jpeg";
 import product13 from "@/assets/product13.jpeg";
+import product15 from "@/assets/product15.png";
 import { Link } from "react-router-dom";
 import { CheckCircle, ArrowRight } from "lucide-react";
 
 const products = [
   { 
-    name: "Amchur Powder", 
+    name: "Turmeric Powder", 
     category: "Spice Powder", 
-    desc: "Zesty dry mango powder for that perfect tang in your chats.", 
-    img: product1, 
+    desc: "Pure golden haldi, rich in curcumin for daily cooking and medicinal benefits.", 
+    img: product5, 
   },
   { 
     name: "Red Chilli Powder", 
@@ -30,16 +29,28 @@ const products = [
     img: product2, 
   },
   { 
+    name: "Coriander Powder", 
+    category: "Spice Powder", 
+    desc: "Finely ground dhania with a signature fresh and earthy aroma.", 
+    img: product8 
+  },
+  { 
+    name: "Amchur Powder", 
+    category: "Spice Powder", 
+    desc: "Zesty dry mango powder for that perfect tang in your chats.", 
+    img: product1, 
+  },
+  { 
+    name: "Black Pepper Powder", 
+    category: "Spice Powder", 
+    desc: "Boldly ground black pepper for a sharp, pungent kick.", 
+    img: product9 
+  },
+  { 
     name: "Kitchen King", 
     category: "Signature Blend", 
     desc: "The ultimate all-purpose spice blend that elevates every single dish.", 
     img: product4 
-  },
-  { 
-    name: "Turmeric Powder", 
-    category: "Spice Powder", 
-    desc: "Pure golden haldi, rich in curcumin for daily cooking and medicinal benefits.", 
-    img: product5, 
   },
   { 
     name: "Garam Masala", 
@@ -54,38 +65,14 @@ const products = [
     img: product7, 
   },
   { 
-    name: "Raw Whole Organic", 
-    category: "Whole Spice", 
-    desc: "Unprocessed, farm-fresh whole spices for maximum flavor and health.", 
-    img: product11 
-  },
-  { 
     name: "Variety of Spices", 
     category: "Spice Collection", 
     desc: "A wide assortment of premium spices to stock up your kitchen shelf.", 
     img: product12 
   },
   { 
-    name: "Black Pepper Powder", 
-    category: "Spice Powder", 
-    desc: "Boldly ground black pepper for a sharp, pungent kick.", 
-    img: product9 
-  },
-  { 
-    name: "Coriander Powder", 
-    category: "Spice Powder", 
-    desc: "Finely ground dhania with a signature fresh and earthy aroma.", 
-    img: product8 
-  },
-  { 
-    name: "Spices for Indian", 
-    category: "Signature Blend", 
-    desc: "A curated collection of essential spices for authentic Indian cooking.", 
-    img: product10 
-  },
-  { 
-    name: "Whole Spices", 
-    category: "Whole Spice", 
+    name: "Other Spices", 
+    category: "Other Spices", 
     desc: "Premium quality whole spices sourced directly from the finest farms.", 
     img: product13 
   },
@@ -94,6 +81,12 @@ const products = [
     category: "Signature Blend", 
     desc: "Aromatic blend of whole spices for the perfect royal biryani.", 
     img: product3,
+  },
+  { 
+    name: "Kanda Lasun Masala", 
+    category: "Signature Blend", 
+    desc: "A bold and spicy traditional Maharashtrian blend of onion, garlic, and hand-pounded spices.", 
+    img: product15 
   },
 ];
 
@@ -125,14 +118,13 @@ const Products = () => (
                   
                   <div className="flex items-center justify-between border-t border-spice-gold/5 pt-4 mt-auto">
                     <div className="flex items-center gap-2 text-spice-green font-bold text-[10px] uppercase tracking-wider">
-                      <CheckCircle size={14} />
                       <span>Verified quality</span>
                     </div>
                     <Link
                       to="/contact"
                       className="inline-flex items-center gap-2 text-spice-dark font-display font-bold text-xs group-hover:text-spice-red transition-all"
                     >
-                      Enquire <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                      Enquire
                     </Link>
                   </div>
                 </div>

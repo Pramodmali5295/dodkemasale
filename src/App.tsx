@@ -5,7 +5,6 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import FloatingIcons from "./components/FloatingIcons";
 import ScrollToTop from "./components/ScrollToTop";
 
 // Direct imports for instant navigation
@@ -28,7 +27,6 @@ const App = () => (
       <BrowserRouter>
         <ScrollToTop />
         <Navbar />
-        <FloatingIcons />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />

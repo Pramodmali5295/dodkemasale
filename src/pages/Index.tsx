@@ -77,11 +77,11 @@ const Index = () => {
               fetchPriority="high"
             />
           </div>
-          <h1 className="hero-title font-display text-4xl md:text-6xl lg:text-7xl font-bold text-spice-cream leading-tight mb-6">
+          <h1 className="hero-title font-display text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-spice-cream leading-tight mb-6">
             The Authentic Taste of <br />
             <span className="text-gradient-spice">Indian Spices</span>
           </h1>
-          <p className="hero-sub font-body text-lg md:text-xl text-spice-cream/80 max-w-2xl mx-auto mb-8">
+          <p className="hero-sub font-body text-base sm:text-lg md:text-xl text-spice-cream/80 max-w-2xl mx-auto mb-8">
             Crafted with tradition, packed with purity. Dodke Masale brings you the finest spices sourced directly from Indian farms.
           </p>
           <div className="hero-cta flex flex-wrap gap-4 justify-center">
@@ -89,7 +89,7 @@ const Index = () => {
               to="/products"
               className="inline-flex items-center gap-2 bg-gradient-spice text-primary-foreground font-body font-semibold px-8 py-3 rounded-full hover:scale-105 transition-transform duration-300 shadow-spice"
             >
-              Explore Products <ArrowRight size={18} />
+              Explore Products
             </Link>
             <Link
               to="/contact"
@@ -135,7 +135,7 @@ const Index = () => {
             to="/products"
             className="inline-flex items-center gap-2 text-spice-red font-display font-black uppercase tracking-widest text-sm hover:gap-4 transition-all pb-1 border-b-2 border-spice-gold"
           >
-            View All Products <ArrowRight size={18} />
+            View All Products
           </Link>
         </div>
       </section>
@@ -148,9 +148,6 @@ const Index = () => {
             {whyUs.map((item, i) => (
               <GsapReveal key={item.title} direction="scale" delay={i * 0.15}>
                 <div className="text-center p-8 rounded-xl border border-spice-gold/20 hover:border-spice-gold/50 transition-colors">
-                  <div className="w-16 h-16 rounded-full bg-gradient-spice flex items-center justify-center mx-auto mb-5">
-                    <item.icon size={28} className="text-primary-foreground" />
-                  </div>
                   <h3 className="font-display text-xl font-semibold text-spice-gold mb-2">{item.title}</h3>
                   <p className="font-body text-spice-cream/70 text-sm">{item.desc}</p>
                 </div>
@@ -171,11 +168,6 @@ const Index = () => {
           <div className="flex animate-infinite-scroll-reverse gap-8 min-w-full">
             {[...testimonials, ...testimonials, ...testimonials, ...testimonials, ...testimonials, ...testimonials].map((t, i) => (
               <div key={`${t.name}-${i}`} className="flex-shrink-0 w-80 group bg-card p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
-                <div className="flex gap-1 mb-3">
-                  {Array.from({ length: t.rating }).map((_, j) => (
-                    <Star key={j} size={16} className="fill-spice-gold text-spice-gold" />
-                  ))}
-                </div>
                 <p className="font-body text-black text-sm italic mb-4">"{t.text}"</p>
                 <p className="font-display font-semibold text-black">{t.name}</p>
               </div>

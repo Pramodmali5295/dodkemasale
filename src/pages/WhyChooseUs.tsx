@@ -34,9 +34,6 @@ const WhyChooseUs = () => (
           {strengths.map((s, i) => (
             <GsapReveal key={s.title} direction="scale" delay={i * 0.1}>
               <div className="bg-card p-8 rounded-xl shadow-md hover:shadow-spice transition-all duration-300 h-full">
-                <div className="w-14 h-14 rounded-full bg-gradient-spice flex items-center justify-center mb-5">
-                  <s.icon size={24} className="text-primary-foreground" />
-                </div>
                 <h3 className="font-display text-xl font-semibold mb-3">{s.title}</h3>
                 <p className="font-body text-muted-foreground text-sm leading-relaxed">{s.desc}</p>
               </div>

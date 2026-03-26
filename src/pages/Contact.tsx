@@ -40,9 +40,6 @@ const Contact = () => {
                 <div className="space-y-4">
                   {contactInfo.map((c) => (
                     <div key={c.title} className="flex items-start gap-3">
-                      <div className="w-10 h-10 rounded-full bg-gradient-spice flex items-center justify-center shrink-0">
-                        <c.icon size={18} className="text-primary-foreground" />
-                      </div>
                       <div>
                         <p className="font-display font-semibold text-sm">{c.title}</p>
                         <p className="font-body text-muted-foreground text-sm">{c.text}</p>
@@ -100,7 +97,7 @@ const Contact = () => {
                       <textarea name="message" rows={5} required className="w-full px-4 py-3 rounded-lg border border-border bg-background font-body text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 resize-none" />
                     </div>
                     <button type="submit" className="w-full inline-flex items-center justify-center gap-2 bg-gradient-spice text-primary-foreground font-body font-semibold px-8 py-3 rounded-full hover:scale-[1.02] transition-transform">
-                      Send Message <ArrowRight size={18} />
+                      Send Message
                     </button>
                   </form>
                 )}

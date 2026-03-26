@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import PageHeader from "@/components/PageHeader";
 import GsapReveal from "@/components/GsapReveal";
-import aboutImg from "@/assets/home hero.png";
+import aboutImg from "@/assets/home heros.jpeg";
 import productionImg from "@/assets/hero-spices.jpg";
 import gsap from "gsap";
 import { Target, Eye, Heart, Award, Users, Package, CheckCircle, Zap } from "lucide-react";
@@ -65,7 +65,7 @@ const About = () => {
             <GsapReveal direction="left" className="relative mx-auto w-[90%] sm:w-full max-w-lg lg:max-w-none">
               <div className="absolute -top-6 -left-6 w-24 h-24 bg-gradient-spice rounded-full blur-3xl opacity-20" />
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <img src={aboutImg} alt="The Dodke Masale Story" className="w-full object-cover aspect-[4/3] lg:aspect-[4/3]" />
+                <img src={aboutImg} alt="The Dodke Masale Story" className="w-full aspect-[4/3] object-contain transition-all duration-300" />
               </div>
             </GsapReveal>
             
@@ -84,11 +84,10 @@ const About = () => {
               </p>
               <div className="pt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
-                  { icon: Award, text: "Heritage Recipes" },
-                  { icon: Package, text: "Zero Adulteration" },
+                  { text: "Heritage Recipes" },
+                  { text: "Zero Adulteration" },
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-3 text-spice-dark font-bold">
-                    <item.icon className="text-spice-red" size={20} />
                     <span className="text-md uppercase tracking-wider">{item.text}</span>
                   </div>
                 ))}
@@ -124,16 +123,13 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {[
-              { icon: Target, title: "Our Mission", desc: "To deliver 100% pure, authentic spices to every Indian kitchen while maintaining the highest standards of quality and hygiene." },
-              { icon: Eye, title: "Our Vision", desc: "To become India's most trusted spice brand, recognized for purity, tradition, and innovation in every product line." },
-              { icon: Heart, title: "Our Values", desc: "Integrity, purity, and customer satisfaction form the core of everything we do. Quality is not just a promise — it's our identity." },
+              { title: "Our Mission", desc: "To deliver 100% pure, authentic spices to every Indian kitchen while maintaining the highest standards of quality and hygiene." },
+              { title: "Our Vision", desc: "To become India's most trusted spice brand, recognized for purity, tradition, and innovation in every product line." },
+              { title: "Our Values", desc: "Integrity, purity, and customer satisfaction form the core of everything we do. Quality is not just a promise — it's our identity." },
             ].map((item, i) => (
               <GsapReveal key={item.title} direction="up" delay={i * 0.1}>
                 <div className="group relative overflow-hidden bg-white/5 border border-white/10 p-10 rounded-3xl hover:bg-white/10 transition-all duration-500 hover:-translate-y-2">
                   <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-gradient-spice rounded-full blur-3xl opacity-0 group-hover:opacity-20 transition-opacity" />
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-spice flex items-center justify-center mb-6 shadow-lg shadow-spice/20 group-hover:scale-110 transition-transform">
-                    <item.icon size={28} className="text-white" />
-                  </div>
                   <h3 className="font-display text-2xl font-bold text-spice-gold mb-4">{item.title}</h3>
                   <p className="font-body text-spice-cream/70 text-md leading-relaxed">{item.desc}</p>
                 </div>
@@ -155,13 +151,10 @@ const About = () => {
               </p>
               <div className="space-y-6">
                 {[
-                  { icon: Users, title: "Direct Sourcing", desc: "Sourced directly from the finest spice farms across India." },
-                  { icon: CheckCircle, title: "Lab Tested", desc: "Rigorous quality checks for purity and zero adulteration." },
+                  { title: "Direct Sourcing", desc: "Sourced directly from the finest spice farms across India." },
+                  { title: "Lab Tested", desc: "Rigorous quality checks for purity and zero adulteration." },
                 ].map((item, i) => (
-                  <div key={i} className="flex gap-5 items-start">
-                    <div className="w-12 h-12 rounded-xl bg-spice-cream flex items-center justify-center shrink-0 text-spice-red">
-                      <item.icon size={22} />
-                    </div>
+                  <div key={i} className="">
                     <div>
                       <p className="font-display font-bold text-lg mb-1">{item.title}</p>
                       <p className="font-body text-muted-foreground text-sm">{item.desc}</p>

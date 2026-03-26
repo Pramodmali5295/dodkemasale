@@ -11,10 +11,9 @@ import product6 from "@/assets/product6.jpeg";
 import product7 from "@/assets/product7.jpeg";
 import product8 from "@/assets/product8.jpeg";
 import product9 from "@/assets/product9.jpeg";
-import product10 from "@/assets/product10.jpeg";
-import product11 from "@/assets/product11.jpeg";
 import product12 from "@/assets/product12.jpeg";
 import product13 from "@/assets/product13.jpeg";
+import product15 from "@/assets/product15.png";
 import team1 from "@/assets/team1.jpg";
 import team2 from "@/assets/team2.jpeg";
 import team3 from "@/assets/team3.jpeg";
@@ -22,18 +21,18 @@ import team4 from "@/assets/team4.jpeg";
 import { X, Camera, Grid, Users } from "lucide-react";
 
 const images = [
-  { src: product1, alt: "Amchur Powder", category: "Products" },
-  { src: product2, alt: "Red Chilli Powder", category: "Products" },
-  { src: product4, alt: "Kitchen King", category: "Products" },
   { src: product5, alt: "Turmeric Powder", category: "Products" },
+  { src: product2, alt: "Red Chilli Powder", category: "Products" },
+  { src: product8, alt: "Coriander Powder", category: "Products" },
+  { src: product1, alt: "Amchur Powder", category: "Products" },
+  { src: product9, alt: "Black Pepper Powder", category: "Products" },
+  { src: product4, alt: "Kitchen King", category: "Products" },
   { src: product6, alt: "Garam Masala", category: "Products" },
   { src: product7, alt: "Pav Bhaji Masala", category: "Products" },
-  { src: product11, alt: "Raw Whole Organic", category: "Products" },
   { src: product12, alt: "Variety of Spices", category: "Products" },
-  { src: product9, alt: "Black Pepper Powder", category: "Products" },
-  { src: product8, alt: "Coriander Powder", category: "Products" },
-  { src: product10, alt: "Spices for Indian", category: "Products" },
-  { src: product13, alt: "Whole Spices", category: "Products" },
+  { src: product13, alt: "Other Spices", category: "Products" },
+  { src: product3, alt: "Biryani Masala", category: "Products" },
+  { src: product15, alt: "Kanda Lasun Masala", category: "Products" },
   { src: team1, alt: "Production Expert", category: "Team" },
   { src: team2, alt: "Quality Control Team", category: "Team" },
   { src: team3, alt: "Packaging Department", category: "Team" },
@@ -56,7 +55,6 @@ const Gallery = () => {
           <GsapReveal className="mb-10 text-center">
             <div className="flex items-center justify-center gap-2 mb-4">
               <div className="h-px w-8 bg-spice-gold" />
-              <Grid size={18} className="text-spice-gold" />
               <span className="text-spice-gold font-display font-bold uppercase tracking-widest text-sm">Fine Selection</span>
               <div className="h-px w-8 bg-spice-gold" />
             </div>
@@ -102,7 +100,6 @@ const Gallery = () => {
           <GsapReveal className="mb-10 text-center">
             <div className="flex items-center justify-center gap-2 mb-4">
               <div className="h-px w-8 bg-spice-gold" />
-              <Users size={18} className="text-spice-gold" />
               <span className="text-spice-gold font-display font-bold uppercase tracking-widest text-sm">Human Touch</span>
               <div className="h-px w-8 bg-spice-gold" />
             </div>
@@ -144,7 +141,6 @@ const Gallery = () => {
           onClick={() => setLightbox(null)}
         >
           <div className="absolute top-8 left-8 flex items-center gap-3 text-white">
-            <Camera size={24} className="text-spice-gold" />
             <span className="font-display font-bold uppercase tracking-widest text-sm translate-y-0.5">Dodke Gallery</span>
           </div>
           <button 
