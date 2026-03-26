@@ -30,7 +30,7 @@ const whyUs = [
 const testimonials = [
   { name: "Abhijit Nagare", text: "The perfect for who loves the homely taste! This masala’s soothing aroma brings the authentic taste of the village right to your food… must try…", rating: 5 },
   { name: "Kaushik Kale", text: "The laddoos made by the Dodkes are healthy and worth consuming it for your health benifits. Taste is also very good. I get it for my family every month.", rating: 5 },
-  { name: "Harshada Avaghade", text: "Great spice mixes. I have used all products and they are not only yummy but feels so good for the tummy. Masala is important in cooking because it adds depth and richness of flavour and colour to the dishes. 100% organic homemade masala... Loved it❤️❤️", rating: 5 },
+  { name: "Merin Thomas", text: "For all the spicy food lovers who want a restaurant like experience at home, Dodke Masala is the answer. Good quality, worth the price", rating: 5 },
   { name: "Manoj More", text: "Recently tried Dodke Masale and it was a delightful experience! The blend of spices in their masala is truly exceptional, adding a burst of flavours to every dish. The quality and freshness of the ingredients stood out. Highly recommend!", rating: 5 },
   { name: "CHINTAMANI MARATHE", text: "Must try once, its enrich taste of you sabji's. Your sabjis will start tasting great. Also, try their other products like dink laddu, methya ladu and Haldi power", rating: 5 },
   { name: "Shailesh Gaikwad", text: "'Dodke masale' is the best available masala for adding great taste and aroma to all vegetarian and non-vegetarian recipes.", rating: 5 },
@@ -116,7 +116,7 @@ const Index = () => {
                   <img
                     src={p.img}
                     alt={p.name}
-                    className={`max-w-full max-h-full w-auto h-auto ${p.name === "Biryani Masala" ? "object-cover w-full h-full" : "object-contain"} group-hover:scale-110 transition-transform duration-500`}
+                    className="max-w-full max-h-full w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-spice-dark/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />

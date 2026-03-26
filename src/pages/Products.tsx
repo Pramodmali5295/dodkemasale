@@ -1,6 +1,6 @@
 import PageHeader from "@/components/PageHeader";
 import GsapReveal from "@/components/GsapReveal";
-import product1 from "@/assets/product1.jpeg";
+import product16 from "@/assets/product16.jpeg";
 import product2 from "@/assets/product2.jpeg";
 import product3 from "@/assets/product3.jpeg";
 import product4 from "@/assets/product4.jpeg";
@@ -9,6 +9,7 @@ import product6 from "@/assets/product6.jpeg";
 import product7 from "@/assets/product7.jpeg";
 import product8 from "@/assets/product8.jpeg";
 import product9 from "@/assets/product9.jpeg";
+import product11 from "@/assets/product11.jpeg";
 import product12 from "@/assets/product12.jpeg";
 import product15 from "@/assets/product15.png";
 import { Link } from "react-router-dom";
@@ -52,18 +53,6 @@ const products = [
     img: product4 
   },
   { 
-    name: "Amchur Powder", 
-    category: "Spice Powder", 
-    desc: "Zesty dry mango powder for that perfect tang in your chats.", 
-    img: product1, 
-  },
-  { 
-    name: "Black Pepper Powder", 
-    category: "Spice Powder", 
-    desc: "Boldly ground black pepper for a sharp, pungent kick.", 
-    img: product9 
-  },
-  { 
     name: "Non Veg Masala", 
     category: "Signature Blend", 
     desc: "A rich and robust spice blend crafted for the perfect authentic meat curries.", 
@@ -76,10 +65,28 @@ const products = [
     img: product3,
   },
   { 
+    name: "Kala Masala", 
+    category: "Signature Blend", 
+    desc: "Authentic traditional Maharashtrian roasted spice blend with a complex, dark, and smoky flavor.", 
+    img: product16, 
+  },
+  { 
+    name: "Black Pepper Powder", 
+    category: "Spice Powder", 
+    desc: "Boldly ground black pepper for a sharp, pungent kick.", 
+    img: product9 
+  },
+  { 
     name: "Variety of Spices", 
     category: "Spice Collection", 
     desc: "A wide assortment of premium spices to stock up your kitchen shelf.", 
     img: product12 
+  },
+  { 
+    name: "Whole Spices", 
+    category: "Whole Spices", 
+    desc: "Unprocessed, farm-fresh whole spices for maximum flavor and health.", 
+    img: product11 
   },
 ];
 
@@ -90,7 +97,7 @@ const Products = () => (
     {/* Products Grid */}
     <section className="py-20 bg-gradient-warm overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {products.map((p, i) => (
             <GsapReveal key={p.name} direction="up" delay={i * 0.1}>
               <div className="group h-full bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl hover:shadow-spice/20 transition-all duration-500 border border-spice-gold/10">
@@ -98,7 +105,7 @@ const Products = () => (
                   <img
                     src={p.img}
                     alt={p.name}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
                   />
                 </div>
                 
