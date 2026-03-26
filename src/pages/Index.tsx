@@ -6,7 +6,7 @@ import { ArrowRight, Leaf, Shield, Award, Star } from "lucide-react";
 import GsapReveal from "@/components/GsapReveal";
 import SectionTitle from "@/components/SectionTitle";
 import heroImg from "@/assets/hero-spices.jpg";
-import product1 from "@/assets/product1.jpeg";
+
 import product2 from "@/assets/product2.jpeg";
 import product3 from "@/assets/product3.jpeg";
 import product4 from "@/assets/product4.jpeg";
@@ -15,7 +15,7 @@ import logoImg from "@/assets/favlogo.png";
 gsap.registerPlugin(ScrollTrigger);
 
 const featuredProducts = [
-  { name: "Amchur Powder", desc: "Zesty dry mango powder for that perfect Indian tang", img: product1 },
+
   { name: "Red Chilli Powder", desc: "Bold & fiery mirchi for authentic heat", img: product2 },
   { name: "Biryani Masala", desc: "Royal blend of finest whole spices for biryani", img: product3 },
   { name: "Kitchen King", desc: "The ultimate all-purpose spice blend for every dish", img: product4 },

@@ -36,7 +36,7 @@ const images = [
   { src: team1, alt: "Aniket D", category: "Team", name: "Aniket D", role: "Founder" },
   { src: team2, alt: "Harshada A", category: "Team", name: "Harshada A", role: "Operations Manager" },
   { src: team3, alt: "Prajakta K", category: "Team", name: "Prajakta K", role: "Finance & Accounts Manager" },
-  { src: team4, alt: "Gayetri F", category: "Team", name: "Gayetri F", role: "Sales & Marketing Head" },
+  { src: team4, alt: "Gayatri F", category: "Team", name: "Gayatri F", role: "Sales & Marketing Head" },
 ];
 
 const Gallery = () => {
