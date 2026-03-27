@@ -68,6 +68,10 @@ const Footer = () => {
                 <Phone size={14} className="text-spice-gold shrink-0" />
                 <span>+91 85510 60554 | +91 90110 10337</span>
               </div>
+              <div className="flex items-center gap-3">
+                <Mail size={14} className="text-spice-gold shrink-0" />
+                <a href="mailto:info@dodkemasale.com" className="hover:text-spice-gold transition-colors">info@dodkemasale.com</a>
+              </div>
             </div>
           </div>
         </div>

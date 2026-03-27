@@ -65,7 +65,7 @@ const Contact = () => {
 
             {/* Form */}
             <GsapReveal direction="right">
-              <div className="bg-card p-8 rounded-xl shadow-spice">
+              <div className="bg-card p-4 xs:p-6 sm:p-8 rounded-xl shadow-spice">
                 <h3 className="font-display text-2xl font-bold mb-6">Send a Message</h3>
                 {submitted ? (
                   <div className="text-center py-8">
@@ -81,7 +81,18 @@ const Contact = () => {
                       </div>
                       <div>
                         <label className="font-body text-sm font-medium mb-1 block">Phone</label>
-                        <input name="phone" type="tel" required className="w-full px-4 py-3 rounded-lg border border-border bg-background font-body text-sm focus:outline-none focus:ring-2 focus:ring-primary/30" />
+                        <input 
+                          name="phone" 
+                          type="tel" 
+                          required 
+                          pattern="[0-9]{10}"
+                          maxLength={10}
+                          title="Please enter a 10-digit phone number"
+                          onInput={(e) => {
+                            e.currentTarget.value = e.currentTarget.value.replace(/[^0-9]/g, '');
+                          }}
+                          className="w-full px-4 py-3 rounded-lg border border-border bg-background font-body text-sm focus:outline-none focus:ring-2 focus:ring-primary/30" 
+                        />
                       </div>
                     </div>
                     <div>

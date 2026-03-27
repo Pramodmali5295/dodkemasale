@@ -85,32 +85,32 @@ const Index = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-spice-dark/70 via-spice-dark/40 to-spice-dark/20" />
         </div>
-        <div className="relative container mx-auto px-4 text-center py-32">
-          <div className="hero-logo mb-8 inline-block">
+        <div className="relative container mx-auto px-4 text-center py-20 xs:py-24 sm:py-32 lg:py-40 flex flex-col items-center">
+          <div className="hero-logo mb-6 sm:mb-8">
             <img 
               src={logoImg} 
               alt="Dodke Masale" 
-              className="w-32 h-32 sm:w-48 sm:h-48 object-contain mx-auto animate-float" 
+              className="w-32 h-32 xs:w-48 sm:w-64 md:w-80 object-contain animate-float" 
               fetchPriority="high"
             />
           </div>
-          <h1 className="hero-title font-display text-2xl xs:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-spice-cream leading-tight mb-6">
-            The Authentic Taste of <br />
+          <h1 className="hero-title font-display text-2xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-spice-cream leading-tight mb-6 max-w-4xl">
+            The Authentic Taste of <br className="hidden sm:block" />
             <span className="text-gradient-spice">Indian Spices</span>
           </h1>
-          <p className="hero-sub font-body text-sm sm:text-lg md:text-xl text-spice-cream/80 max-w-2xl mx-auto mb-8 px-4 sm:px-0">
+          <p className="hero-sub font-body text-xs xs:text-sm sm:text-lg md:text-xl text-spice-cream/80 max-w-2xl mb-8 px-2 sm:px-0">
             Crafted with tradition, packed with purity. Dodke Masale brings you the finest spices sourced directly from Indian farms.
           </p>
-          <div className="hero-cta flex flex-wrap gap-4 justify-center">
+          <div className="hero-cta flex flex-col xs:flex-row gap-3 xs:gap-4 w-full xs:w-auto px-4 xs:px-0">
             <Link
               to="/products"
-              className="inline-flex items-center gap-2 bg-gradient-spice text-primary-foreground font-body font-semibold px-8 py-3 rounded-full hover:scale-105 transition-transform duration-300 shadow-spice"
+              className="inline-flex items-center justify-center gap-2 bg-gradient-spice text-white font-body font-bold px-8 py-3.5 rounded-full hover:scale-105 transition-transform duration-300 shadow-spice"
             >
               Explore Products
             </Link>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 border-2 border-spice-gold text-spice-gold font-body font-semibold px-8 py-3 rounded-full hover:bg-spice-gold/10 transition-colors duration-300"
+              className="inline-flex items-center justify-center gap-2 border-2 border-spice-gold text-spice-gold font-body font-bold px-8 py-3.5 rounded-full hover:bg-spice-gold/10 transition-colors duration-300"
             >
               Contact Us
             </Link>

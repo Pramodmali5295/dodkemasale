@@ -104,9 +104,9 @@ const About = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {stats.map((stat, i) => (
               <GsapReveal key={stat.label} direction="up" delay={i * 0.1} className="h-full">
-                <div className={`shadow-lg rounded-2xl p-6 md:p-8 text-center border-2 transition-all duration-500 hover:scale-105 group overflow-hidden relative ${stat.color} bg-white h-full flex flex-col justify-center`}>
+                <div className={`shadow-lg rounded-2xl p-4 xs:p-6 md:p-8 text-center border-2 transition-all duration-500 hover:scale-105 group overflow-hidden relative ${stat.color} bg-white h-full flex flex-col justify-center`}>
                   <div className={`absolute top-0 left-0 w-full h-1 opacity-20 bg-current`} />
-                  <p className="text-3xl md:text-5xl font-display font-black mb-2 leading-none pt-2">
+                  <p className="text-3xl xs:text-4xl md:text-5xl font-display font-black mb-2 leading-none pt-2">
                     <StatCounter value={stat.value} suffix={stat.suffix} isActive={isStatsVisible} />
                   </p>
                   <p className="text-[10px] md:text-xs font-body font-black uppercase tracking-widest opacity-80 leading-tight">{stat.label}</p>
@@ -128,7 +128,7 @@ const About = () => {
               { title: "Our Values", desc: "Integrity, purity, and customer satisfaction form the core of everything we do. Quality is not just a promise — it's our identity." },
             ].map((item, i) => (
               <GsapReveal key={item.title} direction="up" delay={i * 0.1}>
-                <div className="group relative overflow-hidden bg-white/5 border border-white/10 p-10 rounded-3xl hover:bg-white/10 transition-all duration-500 hover:-translate-y-2">
+                <div className="group relative overflow-hidden bg-white/5 border border-white/10 p-6 xs:p-8 lg:p-10 rounded-3xl hover:bg-white/10 transition-all duration-500 hover:-translate-y-2">
                   <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-gradient-spice rounded-full blur-3xl opacity-0 group-hover:opacity-20 transition-opacity" />
                   <h3 className="font-display text-2xl font-bold text-spice-gold mb-4">{item.title}</h3>
                   <p className="font-body text-spice-cream/70 text-md leading-relaxed">{item.desc}</p>

@@ -33,7 +33,7 @@ const WhyChooseUs = () => (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {strengths.map((s, i) => (
             <GsapReveal key={s.title} direction="scale" delay={i * 0.1}>
-              <div className="bg-card p-8 rounded-xl shadow-md hover:shadow-spice transition-all duration-300 h-full">
+              <div className="bg-card p-6 sm:p-8 rounded-xl shadow-md hover:shadow-spice transition-all duration-300 h-full">
                 <h3 className="font-display text-xl font-semibold mb-3">{s.title}</h3>
                 <p className="font-body text-muted-foreground text-sm leading-relaxed">{s.desc}</p>
               </div>
