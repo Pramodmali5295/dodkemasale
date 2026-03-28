@@ -101,7 +101,7 @@ const About = () => {
       {/* Statistics Section */}
       <section ref={statsRef} className="py-16 bg-gradient-warm relative z-10 overflow-hidden">
         <div className="container mx-auto px-4 max-w-5xl">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {stats.map((stat, i) => (
               <GsapReveal key={stat.label} direction="up" delay={i * 0.1} className="h-full">
                 <div className={`shadow-lg rounded-2xl p-4 xs:p-6 md:p-8 text-center border-2 transition-all duration-500 hover:scale-105 group overflow-hidden relative ${stat.color} bg-white h-full flex flex-col justify-center`}>

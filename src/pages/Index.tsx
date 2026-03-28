@@ -96,7 +96,7 @@ const Index = () => {
           </div>
           <h1 className="hero-title font-display text-2xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-spice-cream leading-tight mb-6 max-w-4xl">
             The Authentic Taste of <br className="hidden sm:block" />
-            <span className="text-gradient-spice">Indian Spices</span>
+            <span className="text-yellow-400">Indian Spices</span>
           </h1>
           <p className="hero-sub font-body text-xs xs:text-sm sm:text-lg md:text-xl text-spice-cream/80 max-w-2xl mb-8 px-2 sm:px-0">
             Crafted with tradition, packed with purity. Dodke Masale brings you the finest spices sourced directly from Indian farms.

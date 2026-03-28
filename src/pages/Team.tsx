@@ -50,28 +50,28 @@ const Team = () => {
             </p>
           </GsapReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 md:gap-12 max-w-5xl mx-auto">
             {teamMembers.map((member, i) => (
               <GsapReveal 
                 key={member.name} 
                 delay={i * 0.1}
                 direction="up"
               >
-                <div className="group space-y-4">
-                  <div className="relative aspect-[3/4] overflow-hidden rounded-3xl shadow-xl border-4 border-white group-hover:border-spice-gold transition-colors duration-500">
+                <div className="group space-y-3 max-w-[240px] mx-auto">
+                  <div className="relative aspect-[3/4] overflow-hidden rounded-2xl shadow-lg border-2 border-white group-hover:border-spice-gold transition-colors duration-500">
                     <img 
                       src={member.image} 
                       alt={member.name} 
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                      className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110" 
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-spice-dark/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   </div>
                   
-                  <div className="text-center group-hover:-translate-y-2 transition-transform duration-500 px-2">
-                    <h3 className="font-display text-2xl font-bold text-spice-dark mb-1">{member.name}</h3>
-                    <p className="font-body text-spice-red font-bold text-sm uppercase tracking-widest mb-3">{member.role}</p>
-                    <div className="w-12 h-1 bg-spice-gold mx-auto mb-4 rounded-full group-hover:w-24 transition-all duration-500" />
-                    <p className="font-body text-muted-foreground text-xs leading-relaxed italic line-clamp-3">
+                  <div className="text-center group-hover:-translate-y-1 transition-transform duration-500 px-1">
+                    <h3 className="font-display text-lg sm:text-xl font-bold text-spice-dark mb-0.5">{member.name}</h3>
+                    <p className="font-body text-spice-red font-bold text-[10px] uppercase tracking-wider mb-2">{member.role}</p>
+                    <div className="w-8 h-0.5 bg-spice-gold mx-auto mb-3 rounded-full group-hover:w-16 transition-all duration-500" />
+                    <p className="font-body text-muted-foreground text-[10px] leading-tight italic line-clamp-2">
                       "{member.desc}"
                     </p>
                   </div>

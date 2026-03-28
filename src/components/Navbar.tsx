@@ -40,7 +40,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 flex items-center justify-between gap-4">
         <Link to="/" className="flex items-center gap-2 shrink truncate">
           <img src={logoImg} alt="Dodke Masale" className="w-8 h-8 xs:w-10 sm:w-14 lg:w-16 object-contain shrink-0" />
-          <span className="font-display text-xs xs:text-sm sm:text-lg lg:text-xl xl:text-2xl font-bold text-spice-gold tracking-wider whitespace-nowrap overflow-hidden text-ellipsis">
+          <span className="font-display text-sm xs:text-sm sm:text-lg lg:text-xl xl:text-2xl font-bold text-spice-gold tracking-wider whitespace-nowrap overflow-hidden text-ellipsis">
             Dodke Masale <sup className="text-[8px] sm:text-xs text-spice-gold/80">TM</sup>
           </span>
         </Link>

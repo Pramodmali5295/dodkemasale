@@ -7,7 +7,7 @@ const contactInfo = [
   { icon: MapPin, title: "Address", text: "10, Atharva Residency, Lane 10c, Vidya Nagar, Pune 411032, Maharashtra, India" },
   { icon: Phone, title: "Phone", text: "+91 85510 60554 | +91 90110 10337" },
   { icon: Mail, title: "Email", text: "info@dodkemasale.com" },
-  { icon: Clock, title: "Business Hours", text: "Mon - Sat: 9:00 AM - 6:00 PM" },
+  { icon: Clock, title: "Business Hours", text: "Mon - Sat: 9:00 AM - 9:00 PM" },
 ];
 
 const Contact = () => {

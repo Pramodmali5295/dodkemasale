@@ -55,7 +55,7 @@ const Gallery = () => {
             </p>
           </GsapReveal>
 
-          <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
             {productImages.map((img, i) => (
               <GsapReveal 
                 key={`prod-${i}`} 
@@ -65,7 +65,7 @@ const Gallery = () => {
               >
                 <div 
                   onClick={() => setLightbox({ src: img.src, alt: img.alt })}
-                  className="relative cursor-pointer rounded-xl overflow-hidden shadow-lg border border-spice-gold/10 hover:shadow-2xl transition-all duration-300 aspect-[4/3] group"
+                  className="relative cursor-pointer rounded-xl overflow-hidden shadow-lg border border-spice-gold/10 hover:shadow-2xl transition-all duration-300 aspect-square sm:aspect-[4/3] group"
                 >
                   <img 
                     src={img.src} 
@@ -73,8 +73,8 @@ const Gallery = () => {
                     alt={img.alt} 
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
-                    <span className="text-white font-display font-extrabold text-[14px] sm:text-[18px] uppercase tracking-widest leading-none text-center">
+                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-2 sm:p-4">
+                    <span className="text-white font-display font-extrabold text-[10px] xs:text-[12px] sm:text-[18px] uppercase tracking-widest leading-none text-center">
                       {img.alt}
                     </span>
                   </div>
